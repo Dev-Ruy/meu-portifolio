@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruy Almeida | Gestão de TI & Design</title>
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 600px;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary); }
+        .tagline { font-size: 1.2rem; color: #94a3b8; margin-bottom: 20px; }
+
+        .container { max-width: 1000px; margin: auto; padding: 50px 20px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); border: 1px solid var(--primary); }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .skills-tag {
+            display: inline-block;
+            background: rgba(0, 210, 255, 0.1);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="profile-card">
+            <h1>Ruy Almeida</h1>
+            <p class="tagline">Gestão de TI | Web Dev | UI/UX Design</p>
+            <p>Transformando dados em experiências visuais e soluções técnicas de alto impacto.</p>
+            <a href="https://github.com/Dev-Ruy/Esqtoque" class="btn">Ver Projeto</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 style="text-align:center">Especialidades</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>💻 Tecnologia & Gestão</h3>
+                <p>Estudante de Gestão de TI na Estácio. Foco em infraestrutura, Cloud e automação de processos.</p>
+                <span class="skills-tag">Suporte Técnico</span>
+                <span class="skills-tag">Cloud</span>
+                <span class="skills-tag">Transformação Digital</span>
+            </div>
+            <div class="card">
+                <h3>🎨 Design & Frontend</h3>
+                <p>Criação de interfaces modernas, logotipos e desenvolvimento web focado na experiência do usuário.</p>
+                <span class="skills-tag">HTML/CSS</span>
+                <span class="skills-tag">UI/UX</span>
+                <span class="skills-tag">Design Gráfico</span>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #64748b;">
+        <p>&copy; 2026 Ruy Almeida - Portfólio em Construção</p>
+    </footer>
+
+</body>
+</html>
