@@ -11,7 +11,7 @@
             --primary: #00d2ff;
             --secondary: #3a7bd5;
             --accent: #6366f1;
-            --verified: #00ff88;
+            --verified: #00d4ff; /* Azul neon */
             --dark: #0f172a;
             --dark-2: #1e293b;
             --light: #f8fafc;
@@ -154,12 +154,12 @@
             line-height: 1.1;
         }
 
-        /* SELO VERIFICADO - Estilo Twitter/X Premium */
+        /* SELO VERIFICADO - AREDONDADO AZUL NEON */
         .verified-badge {
-            width: 28px;
-            height: 28px;
-            background: linear-gradient(135deg, var(--verified), #00cc6a);
-            border-radius: 6px;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--verified), #00b8e6);
+            border-radius: 50%; /* AREDONDADO PERFEITO */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -167,34 +167,38 @@
             font-weight: 700;
             color: white;
             box-shadow: 
-                0 4px 12px rgba(0, 255, 136, 0.4),
-                0 0 0 2px rgba(255, 255, 255, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+                0 0 20px rgba(0, 212, 255, 0.6),
+                0 0 40px rgba(0, 212, 255, 0.4),
+                inset 0 2px 4px rgba(255, 255, 255, 0.3);
             position: relative;
-            animation: verifiedPulse 2s ease-in-out infinite;
+            animation: verifiedNeonPulse 2.5s ease-in-out infinite;
             flex-shrink: 0;
         }
 
         .verified-badge::after {
             content: '✓';
-            font-size: 12px;
+            font-size: 16px;
             line-height: 1;
+            font-weight: 900;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
         }
 
-        @keyframes verifiedPulse {
+        @keyframes verifiedNeonPulse {
             0%, 100% { 
                 box-shadow: 
-                    0 4px 12px rgba(0, 255, 136, 0.4),
-                    0 0 0 2px rgba(255, 255, 255, 0.2);
-                transform: scale(1);
+                    0 0 20px rgba(0, 212, 255, 0.6),
+                    0 0 40px rgba(0, 212, 255, 0.4),
+                    inset 0 2px 4px rgba(255, 255, 255, 0.3);
+                transform: scale(1) rotate(0deg);
             }
+            25% { transform: scale(1.1) rotate(90deg); }
             50% { 
                 box-shadow: 
-                    0 0 0 6px rgba(0, 255, 136, 0.2),
-                    0 4px 20px rgba(0, 255, 136, 0.6),
-                    0 0 0 4px rgba(255, 255, 255, 0.3);
-                transform: scale(1.05);
+                    0 0 30px rgba(0, 212, 255, 0.8),
+                    0 0 60px rgba(0, 212, 255, 0.6);
+                transform: scale(1.15) rotate(180deg);
             }
+            75% { transform: scale(1.1) rotate(270deg); }
         }
 
         .tagline {
@@ -401,7 +405,7 @@
             
             <!-- Conteúdo do Perfil -->
             <div class="profile-content">
-                <!-- NOME + SELO VERIFICADO -->
+                <!-- NOME + SELO VERIFICADO AZUL NEON AREDONDADO -->
                 <div class="name-container">
                     <h1>Ruy Almeida</h1>
                     <div class="verified-badge" title="Verificado" aria-label="Conta verificada"></div>
